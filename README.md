@@ -9,7 +9,7 @@
 	https://aihelp.net/aihelph5/js/aihelp.js
 
 ## 2. 创建初始化参数
-在本地js文件中创建初始参数[object] appId,gameuid,userUid,userName,language,hsTags,custom,autoEntrance等参数。
+在本地js文件中创建初始参数[object] appId,appName,domain,mode,userId,userName,language,userTags,customData,welcomeMessage等参数。
 
 >示例:
 
