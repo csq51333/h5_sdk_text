@@ -36,9 +36,6 @@
 appId: 不同平台的id,此处需使用web的appid.<br />
 appKey: 应用名.<br />
 domain：域名.<br />
-conversationInten: 设置为“1”时，展示机器人客诉页面，设置“2”时展示人工客诉页面.<br />
-alwaysShowHumanSupportButtonInBotPage: 设置为“true”时，机器人客诉页面显示人工入口，设置“2”时展示人工客诉页面.<br />
-welcomeMessage：人工客服自定义欢迎语.<br />
 mode: 进入模块类型：根据传值对应进入不同页面：<br />
 
 > **mode:"showConversation"**:  默认进入机器人客服页面，设置conversationIntent为“2”，进入人工客服页面<br />
@@ -55,6 +52,9 @@ appName: 自定义APP名称.<br />
 language: 语言. 选传项,AIHelp会优先使用您所传的language设置SDK的默认语言；如果不传，则使用当前设备语言初始化 SDK.<br />
 userTags: 用户标签. 选传项,会将所传标签在AIHelp客服后台客诉中显示.多个标签之间以“,”分隔<br />
 customData: 自定义数据. 选传项,JSON字符串，格式：{“key”:“value”, “key”:“value”}.<br />
+conversationInten: 默认为“1”，展示机器人客诉页面，设置为“2”时，展示人工客诉页面.<br />
+alwaysShowHumanSupportButtonInBotPage: 默认为“true”，机器人客诉页面显示人工入口.<br />
+welcomeMessage：人工客服自定义欢迎语.<br />
 
 **特殊项**：<br />
 sectionId: 当mode为“showFAQSection”时，sectionId为必传项.<br />
