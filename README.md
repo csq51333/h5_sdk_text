@@ -55,6 +55,9 @@ customData: 自定义数据. 选传项,JSON字符串，格式：{“key”:“va
 conversationInten: 默认为“1”，展示机器人客诉页面，设置为“2”时，展示人工客诉页面.<br />
 alwaysShowHumanSupportButtonInBotPage: 默认为“true”，机器人客诉页面显示人工入口.<br />
 welcomeMessage：人工客服自定义欢迎语.<br />
+fullscreen: 是否全屏展示 默认false不全屏，true全屏.<br />
+selectIndex: 运营模块默认选中页签，传入0-2为选中页签，大于2默认选中客诉栏.<br />
+conversationTitle: 运营模块客服页签的标题.<br />
 
 **特殊项**：<br />
 sectionId: 当mode为“showFAQSection”时，sectionId为必传项.<br />
