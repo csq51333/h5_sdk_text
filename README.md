@@ -16,33 +16,49 @@
 	var elva_conf = {
 		appId: `${appId}`,
 		appName: `${appName}`,
-		userUid: `${userUid}`,
+		domain: `${domain}`,
+		mode: `showFAQSection`,
+		sectionId：`${sectionId}`,
+		conversationInten: `${hsTags}`,
+		userId: `${userUid}`,
 		userName: `${userName}`,
+		appName: `${appName}`,
 		language: `${language}`,
-		hsTags: `${hsTags}`,
-		custom: `${custom}`,
-		autoEntrance: `${autoEntrance}`
+		userTags: `${userTags}`,
+		customData: `${customData}`,
+		conversationInten: 1,
+		welcomeMessage: "您好，有什么问题可以帮您",
+		alwaysShowHumanSupportButtonInBotPage: true
 	}  
 
 **说明:**<br /> 
+必传项：
+appId: 不同平台的id,此处需使用web的appid.<br />
+appKey: 应用名.<br />
+domain：域名.<br />
+conversationInten: 设置为“1”时，展示机器人客诉页面，设置“2”时展示人工客诉页面.<br />
+alwaysShowHumanSupportButtonInBotPage: 设置为“true”时，机器人客诉页面显示人工入口，设置“2”时展示人工客诉页面.<br />
+welcomeMessage：人工客服自定义欢迎语.<br />
+mode: 进入模块类型：根据传值对应进入不同页面：<br />
 
-appId: 不同平台的id,此处需使用web的appid. 必传项.<br />
-appName: 应用名. 必传项.<br />
-userUid: 用户id. 选传项,AIHelp会优先使用您所传的uid,若是uid为空,AIHelp会根据用户的设备与浏览器生成唯一id作为用户uid.<br />
-userName: 用户名. 选传项,AIHelp会优先使用您所传的userName,AIHelp会将所有未传userName的用户命名为Unknown_User.<br />
-language: 语言. 必传项,否则AIHelp会将当前用户语言默认为英语.<br />
-hsTags: 标签. 选传项,会将所传标签在AIHelp客服后台客诉中显示.<br />
-custom: 体验定制化. 选传项,可传值为"1","2","3","4","5".分别对应以下5种体验：<br />
-
-> **custom:"1"**:  默认进入FAQ列表页面，点击“联系客服”直接进入人工客服页面<br />
-> **custom:"2"**:  默认进入人工客服页面<br />
-> **custom:"3"**:  默认进入机器人客服页面<br />
-> **custom:"4"**:  默认进入机器人客服页面，并且不显示页面左下角的“联系客服”入口<br />
-> **custom:"5"**:  默认进入FAQ列表页面，并且不显示“联系客服”入口<br />
-> **如果不传，则默认进入FAQ列表页面，点击“联系客服”进入机器人客服页面**
+> **mode:"showConversation"**:  默认进入机器人客服页面，设置conversationIntent为“2”，进入人工客服页面<br />
+> **mode:"showAllFAQSections"**:  进入所有FAQ分类列表页面<br />
+> **mode:"showFAQSection"**:  单独展示某个 FAQ 分类，此时sectionId为必传项<br />
+> **mode:"showSingleFAQ"**:  展示某个特定的 FAQ 问题，faqId为必传项<br />
+> **mode:"showOperation"**:  进入运营页面<br />
 <br />
 
-autoEntrance: 是否智能隐藏'人工客服'入口.选传项.是请传'1',将会智能隐藏入口,只有在用户提交表单或客服发送信息到用户后等一些情景下才会显示;否请传空,将常显'人工客服'入口.
+选传项：
+userId: 用户唯一标识. 选传项,AIHelp会优先使用您所传的uid,不可以是 0 或 -1,若是uid为空,AIHelp会根据用户的设备与浏览器生成唯一id作为用户uid.<br />
+userName: 用户名. 选传项,AIHelp会优先使用您所传的userName,AIHelp会将所有未传userName的用户命名为Unknown_User.<br />
+appName: 自定义APP名称.<br />
+language: 语言. 选传项,AIHelp会优先使用您所传的language设置SDK的默认语言；如果不传，则使用当前设备语言初始化 SDK.<br />
+userTags: 用户标签. 选传项,会将所传标签在AIHelp客服后台客诉中显示.多个标签之间以“,”分隔<br />
+customData: 自定义数据. 选传项,JSON字符串，格式：{“key”:“value”, “key”:“value”}.<br />
+
+特殊项：
+sectionId: 当mode为“showFAQSection”时，sectionId为必传项.<br />
+faqId: 当mode为“showSingleFAQ”时，faqId为必传项.<br />
 
     
 **注： appId** 请使用注册邮箱登录 [AIHelp 后台](https://console.aihelp.net/elva)。在Settings菜单Applications页面查看。初次使用，请先登录[AIHelp 官网](http://aihelp.net/index.html)自助注册。<br />
