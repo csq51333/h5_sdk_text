@@ -32,7 +32,7 @@
 	}  
 
 **说明:**<br /> 
-必传项：<br />
+**必传项**：<br />
 appId: 不同平台的id,此处需使用web的appid.<br />
 appKey: 应用名.<br />
 domain：域名.<br />
@@ -48,7 +48,7 @@ mode: 进入模块类型：根据传值对应进入不同页面：<br />
 > **mode:"showOperation"**:  进入运营页面<br />
 <br />
 
-选传项：<br />
+**选传项**：<br />
 userId: 用户唯一标识. 选传项,AIHelp会优先使用您所传的uid,不可以是 0 或 -1,若是uid为空,AIHelp会根据用户的设备与浏览器生成唯一id作为用户uid.<br />
 userName: 用户名. 选传项,AIHelp会优先使用您所传的userName,AIHelp会将所有未传userName的用户命名为Unknown_User.<br />
 appName: 自定义APP名称.<br />
@@ -56,7 +56,7 @@ language: 语言. 选传项,AIHelp会优先使用您所传的language设置SDK�
 userTags: 用户标签. 选传项,会将所传标签在AIHelp客服后台客诉中显示.多个标签之间以“,”分隔<br />
 customData: 自定义数据. 选传项,JSON字符串，格式：{“key”:“value”, “key”:“value”}.<br />
 
-特殊项：<br />
+**特殊项**：<br />
 sectionId: 当mode为“showFAQSection”时，sectionId为必传项.<br />
 faqId: 当mode为“showSingleFAQ”时，faqId为必传项.<br />
 
